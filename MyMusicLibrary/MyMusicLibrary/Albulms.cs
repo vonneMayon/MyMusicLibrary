@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.Storage;
 
 namespace MyMusicLibrary
 {
@@ -19,5 +20,12 @@ namespace MyMusicLibrary
         public string ImageUrl { get; set; }
 
         public Dictionary<string, string> MyProperty { get; set; }
+
+        public static Task<ICollection<Albulms>> GetAlbulms()
+        {
+            //temporary TODO
+
+            return null;
+        }
     }
 }
