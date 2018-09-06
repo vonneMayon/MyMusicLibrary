@@ -25,11 +25,12 @@ namespace MyMusicLibrary
         public MainPage()
         {
             this.InitializeComponent();
+            DataContext = Albulms.GetAlbulms();
         }
         
          private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(AddMusic)); 
+            this.Frame.Navigate(typeof(AddMusic));
 
         }
     }
