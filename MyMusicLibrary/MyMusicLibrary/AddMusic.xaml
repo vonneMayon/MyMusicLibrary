@@ -9,6 +9,10 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="Assets/album.jpg"/>
+        </Grid.Background>
+
 
         <Grid.RowDefinitions>
             <RowDefinition Height = "100" />
@@ -27,28 +31,32 @@
             <ColumnDefinition Width = "200" />
         </Grid.ColumnDefinitions>
 
-        <TextBlock Name = "imageLabel" Grid.Column="0" Grid.Row="0" Margin = "200,20,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">Title:</TextBlock>
+        <!--<TextBlock Name = "imageLabel" Grid.Column="0" Grid.Row="0" Margin = "200,20,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">Title:</TextBlock>
         <TextBox Name = "imageUrl" Grid.Column="2" Grid.Row="0" Margin = "10,20,0,30" Text = "{Binding Title, Mode = TwoWay}" Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
 
         <TextBlock Name = "albumLabel" Grid.Column="0" Grid.Row = "1" Margin = "200,20,0,0"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">Artist:</TextBlock>
         <TextBox Name = "albumUrl" Grid.Column = "2" Height="50" Grid.Row = "1" Margin = "10,20,0,0" Text = "{Binding Artist, Mode = TwoWay}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
 
         <TextBlock Name = "titelLabel" Grid.Column="0" Grid.Row = "2" Margin = "200,20,0,0"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">Album:</TextBlock>
-        <TextBox Name = "titleText" Grid.Column = "2" Height="50" Grid.Row = "2" Margin = "10,20,0,0" Text = "{Binding Album, Mode = TwoWay}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <TextBox Name = "titleText" Grid.Column = "2" Height="50" Grid.Row = "2" Margin = "10,20,0,0" Text = "{Binding Album, Mode = TwoWay}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>-->
 
+        
+        
+        <TextBox x:Name="txtFilePath" Width="400"
+         FontSize="20"
+         KeyUp="TxtFilePath_KeyUp"
+         Header="File path"
+         PlaceholderText="Enter file path"/>
+        
         <StackPanel Grid.Row = "5" Grid.ColumnSpan = "2">
             <Button Content = "Add Album" Click = "Button_Click"  
             Margin = "200,20,0,0"/>
             <Button Content="Back" Click="Back_Button" Margin="200,20,50,0"/>
            
+            
         </StackPanel>
 
-        <!--<StackPanel Grid.Row = "4" Grid.ColumnSpan = "2" VerticalAlignment="Stretch">
-            <Button Content = "Add Album" Click = "Button_Click"  
-            Margin = "200,20,0,0"/>
-            <Button Content = "Back" Click = "Back_Click"  
-            Margin = "200,20,50,0"/>
-        </StackPanel>-->
+        
 
     </Grid>
 
