@@ -25,7 +25,7 @@ namespace MyMusicLibrary
         public MainPage()
         {
             this.InitializeComponent();
-            DataContext = Albulms.GetAlbulms();
+            DataContext = Album.GetAlbulmsAsync();
         }
         
          private void Button_Click(object sender, RoutedEventArgs e)

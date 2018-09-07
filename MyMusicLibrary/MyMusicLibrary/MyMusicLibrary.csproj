@@ -112,6 +112,7 @@
     <None Include="MyMusicLibrary_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\album.jpg" />
     <Content Include="Assets\music.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
