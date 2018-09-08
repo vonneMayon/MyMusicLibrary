@@ -8,8 +8,8 @@ namespace MyMusicLibrary
 {
     class Song
     {
-        public string Title;
-        public string Artist;
+        public string Title { get; set; }
+        public string Artist { get; set; }
 
         public Song(string title, string artist)
         {

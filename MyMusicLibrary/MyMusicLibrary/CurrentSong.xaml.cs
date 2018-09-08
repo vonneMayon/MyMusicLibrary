@@ -13,30 +13,21 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
+// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace MyMusicLibrary
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class CurrentSong : Page
     {
-        public MainPage()
+        public CurrentSong()
         {
             this.InitializeComponent();
-            DataContext = Album.GetAlbulmsAsync();
+            Song song = new Song("In Those Jeans", "Ginuwine");
+            this.DataContext = song;
         }
-        
-         private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(AddMusic));
-
-        }
-
-        private void CurrentSong_Button_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(CurrentSong));
-        }
+      
     }
 }

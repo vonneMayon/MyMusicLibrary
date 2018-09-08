@@ -1,0 +1,16 @@
+﻿<Page
+    x:Class="MyMusicLibrary.CurrentSong"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyMusicLibrary"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel>
+        <TextBlock Name="title" HorizontalAlignment="Center"  FontSize="72" Text="{Binding Path=Title}"/>
+        <TextBlock Name="artist" HorizontalAlignment="Center"  FontSize="72" Text="{Binding Path=Artist}"/>
+        <Button Name="btnPlay" HorizontalAlignment="Center" FontSize="72">Play</Button>
+    </StackPanel>
+</Page>
