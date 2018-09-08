@@ -11,6 +11,7 @@
     <StackPanel>
         <TextBlock Name="title" HorizontalAlignment="Center"  FontSize="72" Text="{Binding Path=Title}"/>
         <TextBlock Name="artist" HorizontalAlignment="Center"  FontSize="72" Text="{Binding Path=Artist}"/>
-        <Button Name="btnPlay" HorizontalAlignment="Center" FontSize="72">Play</Button>
+        <MediaPlayerElement x:Name="mediaPlayer" AreTransportControlsEnabled="True"/>
+        <Button Content="Choose file" Click="Button_Click"/>
     </StackPanel>
 </Page>
