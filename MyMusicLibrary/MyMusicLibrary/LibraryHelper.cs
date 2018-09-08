@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.Storage;
 
 namespace MyMusicLibrary
 {
@@ -24,7 +25,7 @@ namespace MyMusicLibrary
                 picker.FileTypeFilter.Add(".m4a");
 
             var file = await picker.PickSingleFileAsync();
-            var folder = ApplicationData.Current.LocalFolder;
+            var folder = Windows.Storage.ApplicationData.Current.LocalFolder;
                 //put file in future access list so it can be accessed when application is closed and reopened
                 Windows.Storage.AccessCache.StorageApplicationPermissions.FutureAccessList.Add(file);
                 //File is copied to local folder for use in music library
